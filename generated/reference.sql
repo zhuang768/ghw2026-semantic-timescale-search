@@ -1,0 +1,6 @@
+CREATE TEMP TABLE semantic_numpy_reference (id integer PRIMARY KEY, cosine_distance double precision, l2_distance double precision);
+INSERT INTO semantic_numpy_reference VALUES (101,0.49745631217956543,0.99745309352874756);
+INSERT INTO semantic_numpy_reference VALUES (102,0.50217831134796143,1.0021759271621704);
+INSERT INTO semantic_numpy_reference VALUES (103,0.51409822702407837,1.0140001773834229);
+INSERT INTO semantic_numpy_reference VALUES (105,0.83300614356994629,1.290740966796875);
+INSERT INTO semantic_numpy_reference VALUES (104,0.93315756320953369,1.3661314249038696);
