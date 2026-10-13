@@ -1,0 +1,28 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "dimensions": 384,
+  "pooling": "attention-mask-aware mean pooling",
+  "normalization": "L2",
+  "device": "cpu",
+  "python": "3.9.6",
+  "package_versions": {
+    "torch": "2.6.0",
+    "transformers": "4.51.3",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3",
+    "tokenizers": "0.21.1",
+    "huggingface-hub": "0.30.2"
+  },
+  "input_sha256": "67edee582e3bc71626a0428da5ff1ef1f0f8f14f4496ced840525e32984abdbb",
+  "corpus_count": 137,
+  "embedding_count_including_query": 138,
+  "inference_seconds": 0.15248312499999983,
+  "embedding_array_float32_sha256": "2edeb78393f301ae77890f0ef68d5d51ab5ef2041bcb00f5d485c27b9effb933",
+  "mean_embedding_norm": 1.0,
+  "filtered_top3_ids_numpy_reference": [
+    101,
+    102,
+    103
+  ]
+}

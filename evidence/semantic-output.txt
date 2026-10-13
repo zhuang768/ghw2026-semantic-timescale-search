@@ -1,0 +1,355 @@
+Pager usage is off.
+Real 384-dimensional MiniLM semantic retrieval in TimescaleDB
+BEGIN
+SET
+psql:semantic.sql:7: NOTICE:  extension "timescaledb" already exists, skipping
+CREATE EXTENSION
+psql:semantic.sql:8: NOTICE:  extension "vector" already exists, skipping
+CREATE EXTENSION
+psql:semantic.sql:9: NOTICE:  schema "ghw_semantic_lab" already exists, skipping
+CREATE SCHEMA
+                                                 database_version                                                  
+-------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 17.7 on aarch64-apple-darwin24.5.0, compiled by Apple clang version 17.0.0 (clang-1700.0.13.5), 64-bit
+(1 row)
+
+   extname   | extversion 
+-------------+------------
+ timescaledb | 2.22.1
+ vector      | 0.8.1
+(2 rows)
+
+psql:semantic.sql:23: NOTICE:  relation "events" already exists, skipping
+CREATE TABLE
+psql:semantic.sql:26: NOTICE:  table "events" is already a hypertable, skipping
+ create_hypertable 
+-------------------
+ (4,f)
+(1 row)
+
+psql:semantic.sql:32: NOTICE:  relation "queries" already exists, skipping
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ANALYZE
+Model and query provenance from the actual inference run
+ id |                                      query_text                                      | dimensions |                                                                                                                                                                                                                                                                                                                                                                                           provenance                                                                                                                                                                                                                                                                                                                                                                                           
+----+--------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 | What caused database requests to become slow and which changes made them fast again? |        384 | {"model": "sentence-transformers/all-MiniLM-L6-v2", "device": "cpu", "python": "3.9.6", "pooling": "attention-mask-aware mean pooling", "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41", "dimensions": 384, "corpus_count": 137, "input_sha256": "67edee582e3bc71626a0428da5ff1ef1f0f8f14f4496ced840525e32984abdbb", "normalization": "L2", "package_versions": {"numpy": "1.26.4", "torch": "2.6.0", "tokenizers": "0.21.1", "safetensors": "0.5.3", "transformers": "4.51.3", "huggingface-hub": "0.30.2"}, "inference_seconds": 0.15248312499999983, "mean_embedding_norm": 1.0, "embedding_array_float32_sha256": "2edeb78393f301ae77890f0ef68d5d51ab5ef2041bcb00f5d485c27b9effb933", "embedding_count_including_query": 138, "filtered_top3_ids_numpy_reference": [101, 102, 103]}
+(1 row)
+
+ hypertable_schema | hypertable_name | num_chunks 
+-------------------+-----------------+------------
+ ghw_semantic_lab  | events          |          4
+(1 row)
+
+SET
+SET
+Executed exact semantic search plan
+                                                                                                                     QUERY PLAN                                                                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit (actual rows=3 loops=1)
+   Buffers: shared hit=18
+   InitPlan 1
+     ->  Seq Scan on queries (actual rows=1 loops=1)
+           Filter: (id = 1)
+           Buffers: shared hit=1
+   ->  Sort (actual rows=3 loops=1)
+         Sort Key: ((_hyper_4_15_chunk.embedding <=> (InitPlan 1).col1))
+         Sort Method: quicksort  Memory: 25kB
+         Buffers: shared hit=18
+         ->  Result (actual rows=5 loops=1)
+               Buffers: shared hit=15
+               ->  Seq Scan on _hyper_4_15_chunk (actual rows=5 loops=1)
+                     Filter: ((recorded_at >= '2026-10-13 00:00:00+00'::timestamp with time zone) AND (recorded_at < '2026-10-14 00:00:00+00'::timestamp with time zone) AND (metadata @> '{"project": "ghw_demo", "category": "database"}'::jsonb))
+                     Rows Removed by Filter: 2
+                     Buffers: shared hit=4
+ Planning:
+   Buffers: shared hit=112
+ Planning Time: 0.142 ms
+ Execution Time: 0.025 ms
+(20 rows)
+
+SELECT 5
+Semantic positives and unrelated negatives: exact cosine ranking
+ id  |      recorded_at       |           title            |  cosine_distance   |    l2_distance     
+-----+------------------------+----------------------------+--------------------+--------------------
+ 101 | 2026-10-13 09:00:00+00 | Missing database index     | 0.4974563418302731 |   0.99745309862859
+ 102 | 2026-10-13 00:00:00+00 | Report scan optimization   | 0.5021783412801222 | 1.0021759439818554
+ 103 | 2026-10-13 23:59:59+00 | Lock contention resolved   | 0.5140982431857205 | 1.0140001651079091
+ 105 | 2026-10-13 11:00:00+00 | Documentation color update | 0.8330061634186601 | 1.2907409837530892
+ 104 | 2026-10-13 10:00:00+00 | Backup recovery drill      | 0.9331575592254137 | 1.3661314018826218
+(5 rows)
+
+Exact L2 top three
+ id  |      recorded_at       |          title           |    l2_distance     
+-----+------------------------+--------------------------+--------------------
+ 101 | 2026-10-13 09:00:00+00 | Missing database index   |   0.99745309862859
+ 102 | 2026-10-13 00:00:00+00 | Report scan optimization | 1.0021759439818554
+ 103 | 2026-10-13 23:59:59+00 | Lock contention resolved | 1.0140001651079091
+(3 rows)
+
+Stronger exact-query matches intentionally excluded by time or metadata
+ id  |      recorded_at       |            title             |                                                                                  metadata                                                                                   | cosine_distance 
+-----+------------------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------
+ 201 | 2026-10-12 23:59:59+00 | Before lower time bound      | {"source": "authored_synthetic_fixture", "project": "ghw_demo", "category": "database", "dimensions": 384, "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"}     |               0
+ 202 | 2026-10-14 00:00:00+00 | At excluded upper time bound | {"source": "authored_synthetic_fixture", "project": "ghw_demo", "category": "database", "dimensions": 384, "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"}     |               0
+ 203 | 2026-10-13 12:00:00+00 | Wrong category               | {"source": "authored_synthetic_fixture", "project": "ghw_demo", "category": "frontend", "dimensions": 384, "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"}     |               0
+ 204 | 2026-10-13 12:30:00+00 | Wrong project                | {"source": "authored_synthetic_fixture", "project": "another_demo", "category": "database", "dimensions": 384, "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"} |               0
+(4 rows)
+
+psql:semantic.sql:140: NOTICE:  PASS: real 384D normalized embeddings, hypertable, UTC/metadata filters, semantic ranking, NumPy cosine/L2 agreement
+DO
+psql:semantic.sql:144: NOTICE:  relation "semantic_cosine_hnsw" already exists, skipping
+CREATE INDEX
+ANALYZE
+SET
+SET
+SET
+SET
+SET
+SET
+Executed HNSW semantic query plan
+                                                                                                                  QUERY PLAN                                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit (actual rows=3 loops=1)
+   Buffers: shared hit=48
+   InitPlan 1
+     ->  Index Scan using queries_pkey on queries (actual rows=1 loops=1)
+           Index Cond: (id = 1)
+           Buffers: shared hit=2
+   ->  Result (actual rows=3 loops=1)
+         Buffers: shared hit=48
+         ->  Index Scan using _hyper_4_15_chunk_semantic_cosine_hnsw on _hyper_4_15_chunk (actual rows=3 loops=1)
+               Order By: (embedding <=> (InitPlan 1).col1)
+               Filter: ((recorded_at >= '2026-10-13 00:00:00+00'::timestamp with time zone) AND (recorded_at < '2026-10-14 00:00:00+00'::timestamp with time zone) AND (metadata @> '{"project": "ghw_demo", "category": "database"}'::jsonb))
+               Rows Removed by Filter: 2
+               Buffers: shared hit=48
+ Planning:
+   Buffers: shared hit=37
+ Planning Time: 0.082 ms
+ Execution Time: 0.024 ms
+(17 rows)
+
+SELECT 3
+ id  |      recorded_at       |          title           |  cosine_distance   
+-----+------------------------+--------------------------+--------------------
+ 101 | 2026-10-13 09:00:00+00 | Missing database index   | 0.4974563418302731
+ 102 | 2026-10-13 00:00:00+00 | Report scan optimization | 0.5021783412801222
+ 103 | 2026-10-13 23:59:59+00 | Lock contention resolved | 0.5140982431857205
+(3 rows)
+
+psql:semantic.sql:201: NOTICE:  PASS: executed HNSW plan and fixture-specific exact top-three neighbor/distance equality
+DO
+psql:semantic.sql:207: NOTICE:  relation "retrieval_runs" already exists, skipping
+CREATE TABLE
+INSERT 0 1
+RAG-ready context assembled from real database retrieval
+                                                                                             jsonb_pretty                                                                                              
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {                                                                                                                                                                                                    +
+     "model": "sentence-transformers/all-MiniLM-L6-v2",                                                                                                                                               +
+     "purpose": "RAG-ready retrieved context; no language-model answer generation is claimed",                                                                                                        +
+     "passages": [                                                                                                                                                                                    +
+         {                                                                                                                                                                                            +
+             "id": 101,                                                                                                                                                                               +
+             "title": "Missing database index",                                                                                                                                                       +
+             "metadata": {                                                                                                                                                                            +
+                 "source": "authored_synthetic_fixture",                                                                                                                                              +
+                 "project": "ghw_demo",                                                                                                                                                               +
+                 "category": "database",                                                                                                                                                              +
+                 "dimensions": 384,                                                                                                                                                                   +
+                 "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"                                                                                                                          +
+             },                                                                                                                                                                                       +
+             "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",+
+             "recorded_at": "2026-10-13T09:00:00+00:00",                                                                                                                                              +
+             "cosine_distance": 0.4974563418302731                                                                                                                                                    +
+         },                                                                                                                                                                                           +
+         {                                                                                                                                                                                            +
+             "id": 102,                                                                                                                                                                               +
+             "title": "Report scan optimization",                                                                                                                                                     +
+             "metadata": {                                                                                                                                                                            +
+                 "source": "authored_synthetic_fixture",                                                                                                                                              +
+                 "project": "ghw_demo",                                                                                                                                                               +
+                 "category": "database",                                                                                                                                                              +
+                 "dimensions": 384,                                                                                                                                                                   +
+                 "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"                                                                                                                          +
+             },                                                                                                                                                                                       +
+             "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",                      +
+             "recorded_at": "2026-10-13T00:00:00+00:00",                                                                                                                                              +
+             "cosine_distance": 0.5021783412801222                                                                                                                                                    +
+         },                                                                                                                                                                                           +
+         {                                                                                                                                                                                            +
+             "id": 103,                                                                                                                                                                               +
+             "title": "Lock contention resolved",                                                                                                                                                     +
+             "metadata": {                                                                                                                                                                            +
+                 "source": "authored_synthetic_fixture",                                                                                                                                              +
+                 "project": "ghw_demo",                                                                                                                                                               +
+                 "category": "database",                                                                                                                                                              +
+                 "dimensions": 384,                                                                                                                                                                   +
+                 "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"                                                                                                                          +
+             },                                                                                                                                                                                       +
+             "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",                                                   +
+             "recorded_at": "2026-10-13T23:59:59+00:00",                                                                                                                                              +
+             "cosine_distance": 0.5140982431857205                                                                                                                                                    +
+         }                                                                                                                                                                                            +
+     ],                                                                                                                                                                                               +
+     "question": "What caused database requests to become slow and which changes made them fast again?",                                                                                              +
+     "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",                                                                                                                                          +
+     "dimensions": 384,                                                                                                                                                                               +
+     "time_window": {                                                                                                                                                                                 +
+         "end_exclusive": "2026-10-14T00:00:00Z",                                                                                                                                                     +
+         "start_inclusive": "2026-10-13T00:00:00Z"                                                                                                                                                    +
+     },                                                                                                                                                                                               +
+     "fixture_source": "authored synthetic events; dates are teaching fixtures",                                                                                                                      +
+     "metadata_filter": {                                                                                                                                                                             +
+         "project": "ghw_demo",                                                                                                                                                                       +
+         "category": "database"                                                                                                                                                                       +
+     }                                                                                                                                                                                                +
+ }
+(1 row)
+
+COMMIT
+SEMANTIC LAB COMPLETE: actual model inference and all database assertions passed

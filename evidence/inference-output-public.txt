@@ -1,0 +1,32 @@
+<semantic-lab>/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "dimensions": 384,
+  "pooling": "attention-mask-aware mean pooling",
+  "normalization": "L2",
+  "device": "cpu",
+  "python": "3.9.6",
+  "package_versions": {
+    "torch": "2.6.0",
+    "transformers": "4.51.3",
+    "numpy": "1.26.4",
+    "safetensors": "0.5.3",
+    "tokenizers": "0.21.1",
+    "huggingface-hub": "0.30.2"
+  },
+  "input_sha256": "67edee582e3bc71626a0428da5ff1ef1f0f8f14f4496ced840525e32984abdbb",
+  "corpus_count": 137,
+  "embedding_count_including_query": 138,
+  "inference_seconds": 0.15248312499999983,
+  "embedding_array_float32_sha256": "2edeb78393f301ae77890f0ef68d5d51ab5ef2041bcb00f5d485c27b9effb933",
+  "mean_embedding_norm": 1.0,
+  "filtered_top3_ids_numpy_reference": [
+    101,
+    102,
+    103
+  ]
+}
+Eligible cosine/L2 NumPy reference: [{"id": 101, "cosine_distance": 0.49745631217956543, "l2_distance": 0.9974530935287476}, {"id": 102, "cosine_distance": 0.5021783113479614, "l2_distance": 1.0021759271621704}, {"id": 103, "cosine_distance": 0.5140982270240784, "l2_distance": 1.0140001773834229}, {"id": 105, "cosine_distance": 0.8330061435699463, "l2_distance": 1.290740966796875}, {"id": 104, "cosine_distance": 0.9331575632095337, "l2_distance": 1.3661314249038696}]
+Generated SQL from actual 384-dimensional model output.

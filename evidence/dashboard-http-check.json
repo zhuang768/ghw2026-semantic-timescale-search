@@ -1,0 +1,81 @@
+{
+  "executed_at_utc": "2026-10-13T19:08:58.118794+00:00",
+  "url": "http://127.0.0.1:8790",
+  "queried_at_utc": "2026-10-13T19:08:58.100Z",
+  "read_only": "on",
+  "dimensions": 384,
+  "corpus_rows": 137,
+  "neighbors": [
+    101,
+    102,
+    103
+  ],
+  "diskann_copy_mismatches": 0,
+  "diskann_matches_current_pgvector": true,
+  "negative_routes": [
+    {
+      "path": "/unknown",
+      "method": "GET",
+      "expected_status": 404,
+      "actual_status": 404,
+      "passed": true
+    },
+    {
+      "path": "/api/status?sql=DROP",
+      "method": "GET",
+      "expected_status": 400,
+      "actual_status": 400,
+      "passed": true
+    },
+    {
+      "path": "/api/status",
+      "method": "POST",
+      "expected_status": 405,
+      "actual_status": 405,
+      "passed": true
+    },
+    {
+      "path": "/api/status",
+      "method": "PUT",
+      "expected_status": 405,
+      "actual_status": 405,
+      "passed": true
+    },
+    {
+      "path": "/api/status",
+      "method": "PATCH",
+      "expected_status": 405,
+      "actual_status": 405,
+      "passed": true
+    },
+    {
+      "path": "/api/status",
+      "method": "DELETE",
+      "expected_status": 405,
+      "actual_status": 405,
+      "passed": true
+    },
+    {
+      "path": "/model/model.safetensors",
+      "method": "GET",
+      "expected_status": 404,
+      "actual_status": 404,
+      "passed": true
+    },
+    {
+      "path": "/../runtime/bin/psql",
+      "method": "GET",
+      "expected_status": 404,
+      "actual_status": 404,
+      "passed": true
+    },
+    {
+      "path": "/api/status",
+      "request_host": "example.invalid",
+      "expected_status": 403,
+      "actual_status": 403,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

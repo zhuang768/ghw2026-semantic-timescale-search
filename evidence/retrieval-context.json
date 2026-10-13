@@ -1,0 +1,60 @@
+{
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "purpose": "RAG-ready retrieved context; no language-model answer generation is claimed",
+    "passages": [
+        {
+            "id": 101,
+            "title": "Missing database index",
+            "metadata": {
+                "source": "authored_synthetic_fixture",
+                "project": "ghw_demo",
+                "category": "database",
+                "dimensions": 384,
+                "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+            },
+            "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",
+            "recorded_at": "2026-10-13T09:00:00+00:00",
+            "cosine_distance": 0.4974563418302731
+        },
+        {
+            "id": 102,
+            "title": "Report scan optimization",
+            "metadata": {
+                "source": "authored_synthetic_fixture",
+                "project": "ghw_demo",
+                "category": "database",
+                "dimensions": 384,
+                "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+            },
+            "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",
+            "recorded_at": "2026-10-13T00:00:00+00:00",
+            "cosine_distance": 0.5021783412801222
+        },
+        {
+            "id": 103,
+            "title": "Lock contention resolved",
+            "metadata": {
+                "source": "authored_synthetic_fixture",
+                "project": "ghw_demo",
+                "category": "database",
+                "dimensions": 384,
+                "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+            },
+            "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",
+            "recorded_at": "2026-10-13T23:59:59+00:00",
+            "cosine_distance": 0.5140982431857205
+        }
+    ],
+    "question": "What caused database requests to become slow and which changes made them fast again?",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "dimensions": 384,
+    "time_window": {
+        "end_exclusive": "2026-10-14T00:00:00Z",
+        "start_inclusive": "2026-10-13T00:00:00Z"
+    },
+    "fixture_source": "authored synthetic events; dates are teaching fixtures",
+    "metadata_filter": {
+        "project": "ghw_demo",
+        "category": "database"
+    }
+}

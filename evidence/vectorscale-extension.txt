@@ -1,0 +1,9 @@
+CREATE EXTENSION
+   extname   | extversion 
+-------------+------------
+ plpgsql     | 1.0
+ timescaledb | 2.22.1
+ vector      | 0.8.1
+ vectorscale | 0.9.1
+(4 rows)
+

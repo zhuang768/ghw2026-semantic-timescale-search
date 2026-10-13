@@ -1,0 +1,288 @@
+{
+  "filters": {
+    "metric": "cosine distance",
+    "project": "ghw_demo",
+    "category": "database",
+    "end_exclusive": "2026-10-14T00:00:00Z",
+    "start_inclusive": "2026-10-13T00:00:00Z",
+    "maximum_inclusive": 0.6
+  },
+  "nearest": [
+    {
+      "id": 101,
+      "title": "Missing database index",
+      "metadata": {
+        "source": "authored_synthetic_fixture",
+        "project": "ghw_demo",
+        "category": "database",
+        "dimensions": 384,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",
+      "l2_distance": 0.99745309862859,
+      "recorded_at": "2026-10-13T09:00:00+00:00",
+      "cosine_distance": 0.4974563418302731
+    },
+    {
+      "id": 102,
+      "title": "Report scan optimization",
+      "metadata": {
+        "source": "authored_synthetic_fixture",
+        "project": "ghw_demo",
+        "category": "database",
+        "dimensions": 384,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",
+      "l2_distance": 1.0021759439818554,
+      "recorded_at": "2026-10-13T00:00:00+00:00",
+      "cosine_distance": 0.5021783412801222
+    },
+    {
+      "id": 103,
+      "title": "Lock contention resolved",
+      "metadata": {
+        "source": "authored_synthetic_fixture",
+        "project": "ghw_demo",
+        "category": "database",
+        "dimensions": 384,
+        "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+      },
+      "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",
+      "l2_distance": 1.0140001651079091,
+      "recorded_at": "2026-10-13T23:59:59+00:00",
+      "cosine_distance": 0.5140982431857205
+    }
+  ],
+  "dimensions": 384,
+  "extensions": {
+    "vector": "0.8.1",
+    "timescaledb": "2.22.1",
+    "vectorscale": "0.9.1"
+  },
+  "query_text": "What caused database requests to become slow and which changes made them fast again?",
+  "corpus_rows": 137,
+  "time_chunks": 4,
+  "queried_at_utc": "2026-10-13T19:03:06.163Z",
+  "model_provenance": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "device": "cpu",
+    "python": "3.9.6",
+    "pooling": "attention-mask-aware mean pooling",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "dimensions": 384,
+    "corpus_count": 137,
+    "input_sha256": "67edee582e3bc71626a0428da5ff1ef1f0f8f14f4496ced840525e32984abdbb",
+    "normalization": "L2",
+    "package_versions": {
+      "numpy": "1.26.4",
+      "torch": "2.6.0",
+      "tokenizers": "0.21.1",
+      "safetensors": "0.5.3",
+      "transformers": "4.51.3",
+      "huggingface-hub": "0.30.2"
+    },
+    "inference_seconds": 0.15248312499999983,
+    "mean_embedding_norm": 1.0,
+    "embedding_array_float32_sha256": "2edeb78393f301ae77890f0ef68d5d51ab5ef2041bcb00f5d485c27b9effb933",
+    "embedding_count_including_query": 138,
+    "filtered_top3_ids_numpy_reference": [
+      101,
+      102,
+      103
+    ]
+  },
+  "postgresql_version": "17.7",
+  "diskann_table_exists": true,
+  "recorded_diskann_run": {
+    "context": {
+      "index": "pgvectorscale StreamingDiskANN",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "purpose": "RAG-ready retrieved context; no language-model answer generation is claimed",
+      "ordering": "materialized filtered DiskANN candidates, then exact cosine reranking",
+      "passages": [
+        {
+          "id": 101,
+          "title": "Missing database index",
+          "metadata": {
+            "source": "authored_synthetic_fixture",
+            "project": "ghw_demo",
+            "category": "database",
+            "dimensions": 384,
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+          },
+          "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",
+          "recorded_at": "2026-10-13T09:00:00+00:00",
+          "cosine_distance": 0.4974563418302731
+        },
+        {
+          "id": 102,
+          "title": "Report scan optimization",
+          "metadata": {
+            "source": "authored_synthetic_fixture",
+            "project": "ghw_demo",
+            "category": "database",
+            "dimensions": 384,
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+          },
+          "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",
+          "recorded_at": "2026-10-13T00:00:00+00:00",
+          "cosine_distance": 0.5021783412801222
+        },
+        {
+          "id": 103,
+          "title": "Lock contention resolved",
+          "metadata": {
+            "source": "authored_synthetic_fixture",
+            "project": "ghw_demo",
+            "category": "database",
+            "dimensions": 384,
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+          },
+          "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",
+          "recorded_at": "2026-10-13T23:59:59+00:00",
+          "cosine_distance": 0.5140982431857205
+        }
+      ],
+      "question": "What caused database requests to become slow and which changes made them fast again?",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dimensions": 384,
+      "time_window": {
+        "end_exclusive": "2026-10-14T00:00:00Z",
+        "start_inclusive": "2026-10-13T00:00:00Z"
+      },
+      "fixture_source": "authored synthetic events; dates are teaching fixtures",
+      "distance_filter": {
+        "metric": "cosine distance",
+        "maximum_inclusive": 0.6
+      },
+      "metadata_filter": {
+        "project": "ghw_demo",
+        "category": "database"
+      }
+    },
+    "executed_at": "2026-10-13T19:02:01.693476+00:00"
+  },
+  "eligible_after_radius": 3,
+  "recorded_semantic_run": {
+    "context": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "purpose": "RAG-ready retrieved context; no language-model answer generation is claimed",
+      "passages": [
+        {
+          "id": 101,
+          "title": "Missing database index",
+          "metadata": {
+            "source": "authored_synthetic_fixture",
+            "project": "ghw_demo",
+            "category": "database",
+            "dimensions": 384,
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+          },
+          "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",
+          "recorded_at": "2026-10-13T09:00:00+00:00",
+          "cosine_distance": 0.4974563418302731
+        },
+        {
+          "id": 102,
+          "title": "Report scan optimization",
+          "metadata": {
+            "source": "authored_synthetic_fixture",
+            "project": "ghw_demo",
+            "category": "database",
+            "dimensions": 384,
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+          },
+          "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",
+          "recorded_at": "2026-10-13T00:00:00+00:00",
+          "cosine_distance": 0.5021783412801222
+        },
+        {
+          "id": 103,
+          "title": "Lock contention resolved",
+          "metadata": {
+            "source": "authored_synthetic_fixture",
+            "project": "ghw_demo",
+            "category": "database",
+            "dimensions": 384,
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+          },
+          "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",
+          "recorded_at": "2026-10-13T23:59:59+00:00",
+          "cosine_distance": 0.5140982431857205
+        }
+      ],
+      "question": "What caused database requests to become slow and which changes made them fast again?",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "dimensions": 384,
+      "time_window": {
+        "end_exclusive": "2026-10-14T00:00:00Z",
+        "start_inclusive": "2026-10-13T00:00:00Z"
+      },
+      "fixture_source": "authored synthetic events; dates are teaching fixtures",
+      "metadata_filter": {
+        "project": "ghw_demo",
+        "category": "database"
+      }
+    },
+    "executed_at": "2026-10-13T18:37:21.961487+00:00"
+  },
+  "transaction_read_only": "on",
+  "eligible_before_radius": 5,
+  "diskann": {
+    "nearest": [
+      {
+        "id": 101,
+        "title": "Missing database index",
+        "metadata": {
+          "source": "authored_synthetic_fixture",
+          "project": "ghw_demo",
+          "category": "database",
+          "dimensions": 384,
+          "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+        },
+        "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",
+        "l2_distance": 0.99745309862859,
+        "recorded_at": "2026-10-13T09:00:00+00:00",
+        "cosine_distance": 0.4974563418302731
+      },
+      {
+        "id": 102,
+        "title": "Report scan optimization",
+        "metadata": {
+          "source": "authored_synthetic_fixture",
+          "project": "ghw_demo",
+          "category": "database",
+          "dimensions": 384,
+          "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+        },
+        "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",
+        "l2_distance": 1.0021759439818554,
+        "recorded_at": "2026-10-13T00:00:00+00:00",
+        "cosine_distance": 0.5021783412801222
+      },
+      {
+        "id": 103,
+        "title": "Lock contention resolved",
+        "metadata": {
+          "source": "authored_synthetic_fixture",
+          "project": "ghw_demo",
+          "category": "database",
+          "dimensions": 384,
+          "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
+        },
+        "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",
+        "l2_distance": 1.0140001651079091,
+        "recorded_at": "2026-10-13T23:59:59+00:00",
+        "cosine_distance": 0.5140982431857205
+      }
+    ],
+    "copy_rows": 137,
+    "queried_at_utc": "2026-10-13T19:03:06.175Z",
+    "copy_mismatches": 0,
+    "diskann_index_present": true,
+    "transaction_read_only": "on",
+    "state": "recorded_run_available",
+    "matches_current_pgvector": true
+  }
+}

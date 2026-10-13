@@ -1,0 +1,184 @@
+Pager usage is off.
+pgvectorscale StreamingDiskANN verification on actual 384D semantic embeddings
+BEGIN
+SET
+DO
+   extname   | extversion 
+-------------+------------
+ timescaledb | 2.22.1
+ vector      | 0.8.1
+ vectorscale | 0.9.1
+(3 rows)
+
+CREATE TABLE
+ create_hypertable 
+-------------------
+ (5,t)
+(1 row)
+
+INSERT 0 137
+ANALYZE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+SET
+SET
+SELECT 5
+Exact database baseline for the separate DiskANN hypertable
+ id  |      recorded_at       |           title            |  cosine_distance   |    l2_distance     
+-----+------------------------+----------------------------+--------------------+--------------------
+ 101 | 2026-10-13 09:00:00+00 | Missing database index     | 0.4974563418302731 |   0.99745309862859
+ 102 | 2026-10-13 00:00:00+00 | Report scan optimization   | 0.5021783412801222 | 1.0021759439818554
+ 103 | 2026-10-13 23:59:59+00 | Lock contention resolved   | 0.5140982431857205 | 1.0140001651079091
+ 105 | 2026-10-13 11:00:00+00 | Documentation color update | 0.8330061634186601 | 1.2907409837530892
+ 104 | 2026-10-13 10:00:00+00 | Backup recovery drill      | 0.9331575592254137 | 1.3661314018826218
+(5 rows)
+
+Exact baseline inside cosine-distance radius 0.6
+ id  |      recorded_at       |          title           |  cosine_distance   |    l2_distance     
+-----+------------------------+--------------------------+--------------------+--------------------
+ 101 | 2026-10-13 09:00:00+00 | Missing database index   | 0.4974563418302731 |   0.99745309862859
+ 102 | 2026-10-13 00:00:00+00 | Report scan optimization | 0.5021783412801222 | 1.0021759439818554
+ 103 | 2026-10-13 23:59:59+00 | Lock contention resolved | 0.5140982431857205 | 1.0140001651079091
+(3 rows)
+
+psql:diskann.sql:113: NOTICE:  PASS: copied actual 384D embeddings, separate hypertable, no HNSW, time/metadata filtering, exact NumPy distance reference
+DO
+psql:diskann.sql:118: NOTICE:  Starting index build with num_neighbors=-1, search_list_size=100, max_alpha=1.2, storage_layout=SbqCompression.
+psql:diskann.sql:118: NOTICE:  Indexed 0 tuples
+psql:diskann.sql:118: NOTICE:  Starting index build with num_neighbors=-1, search_list_size=100, max_alpha=1.2, storage_layout=SbqCompression.
+psql:diskann.sql:118: NOTICE:  Indexed 7 tuples
+psql:diskann.sql:118: NOTICE:  Starting index build with num_neighbors=-1, search_list_size=100, max_alpha=1.2, storage_layout=SbqCompression.
+psql:diskann.sql:118: NOTICE:  Indexed 1 tuples
+psql:diskann.sql:118: NOTICE:  Starting index build with num_neighbors=-1, search_list_size=100, max_alpha=1.2, storage_layout=SbqCompression.
+psql:diskann.sql:118: NOTICE:  Indexed 1 tuples
+psql:diskann.sql:118: NOTICE:  Starting index build with num_neighbors=-1, search_list_size=100, max_alpha=1.2, storage_layout=SbqCompression.
+psql:diskann.sql:118: NOTICE:  Indexed 128 tuples
+CREATE INDEX
+ANALYZE
+SET
+SET
+SET
+SET
+SET
+SET
+Actually executed StreamingDiskANN query plan with time, JSONB and cosine-radius filters
+                                                                                                                      QUERY PLAN                                                                                                                       
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Limit (actual rows=3 loops=1)
+   Buffers: shared hit=61
+   CTE candidates
+     ->  Limit (actual rows=5 loops=1)
+           Buffers: shared hit=61
+           InitPlan 1
+             ->  Index Scan using queries_pkey on queries (actual rows=1 loops=1)
+                   Index Cond: (id = 1)
+                   Buffers: shared hit=2
+           ->  Result (actual rows=5 loops=1)
+                 Buffers: shared hit=61
+                 ->  Index Scan using _hyper_5_19_chunk_semantic_cosine_diskann on _hyper_5_19_chunk (actual rows=5 loops=1)
+                       Order By: (embedding <=> (InitPlan 1).col1)
+                       Filter: ((recorded_at >= '2026-10-13 00:00:00+00'::timestamp with time zone) AND (recorded_at < '2026-10-14 00:00:00+00'::timestamp with time zone) AND (metadata @> '{"project": "ghw_demo", "category": "database"}'::jsonb))
+                       Rows Removed by Filter: 2
+                       Buffers: shared hit=61
+   ->  Sort (actual rows=3 loops=1)
+         Sort Key: ((candidates.cosine_distance + '0'::double precision)), candidates.id
+         Sort Method: quicksort  Memory: 25kB
+         Buffers: shared hit=61
+         ->  CTE Scan on candidates (actual rows=3 loops=1)
+               Filter: (cosine_distance <= '0.6'::double precision)
+               Rows Removed by Filter: 2
+               Buffers: shared hit=61
+ Planning:
+   Buffers: shared hit=51 dirtied=1
+ Planning Time: 0.095 ms
+ Execution Time: 0.179 ms
+(28 rows)
+
+SELECT 3
+Actual StreamingDiskANN semantic neighbors after exact reranking
+ id  |      recorded_at       |          title           |  cosine_distance   
+-----+------------------------+--------------------------+--------------------
+ 101 | 2026-10-13 09:00:00+00 | Missing database index   | 0.4974563418302731
+ 102 | 2026-10-13 00:00:00+00 | Report scan optimization | 0.5021783412801222
+ 103 | 2026-10-13 23:59:59+00 | Lock contention resolved | 0.5140982431857205
+(3 rows)
+
+psql:diskann.sql:197: NOTICE:  PASS: actual StreamingDiskANN plan, time/metadata/cosine-radius-filtered IDs and distances match exact semantic baseline
+DO
+INSERT 0 1
+                                                                                             jsonb_pretty                                                                                              
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ {                                                                                                                                                                                                    +
+     "index": "pgvectorscale StreamingDiskANN",                                                                                                                                                       +
+     "model": "sentence-transformers/all-MiniLM-L6-v2",                                                                                                                                               +
+     "purpose": "RAG-ready retrieved context; no language-model answer generation is claimed",                                                                                                        +
+     "ordering": "materialized filtered DiskANN candidates, then exact cosine reranking",                                                                                                             +
+     "passages": [                                                                                                                                                                                    +
+         {                                                                                                                                                                                            +
+             "id": 101,                                                                                                                                                                               +
+             "title": "Missing database index",                                                                                                                                                       +
+             "metadata": {                                                                                                                                                                            +
+                 "source": "authored_synthetic_fixture",                                                                                                                                              +
+                 "project": "ghw_demo",                                                                                                                                                               +
+                 "category": "database",                                                                                                                                                              +
+                 "dimensions": 384,                                                                                                                                                                   +
+                 "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"                                                                                                                          +
+             },                                                                                                                                                                                       +
+             "description": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",+
+             "recorded_at": "2026-10-13T09:00:00+00:00",                                                                                                                                              +
+             "cosine_distance": 0.4974563418302731                                                                                                                                                    +
+         },                                                                                                                                                                                           +
+         {                                                                                                                                                                                            +
+             "id": 102,                                                                                                                                                                               +
+             "title": "Report scan optimization",                                                                                                                                                     +
+             "metadata": {                                                                                                                                                                            +
+                 "source": "authored_synthetic_fixture",                                                                                                                                              +
+                 "project": "ghw_demo",                                                                                                                                                               +
+                 "category": "database",                                                                                                                                                              +
+                 "dimensions": 384,                                                                                                                                                                   +
+                 "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"                                                                                                                          +
+             },                                                                                                                                                                                       +
+             "description": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",                      +
+             "recorded_at": "2026-10-13T00:00:00+00:00",                                                                                                                                              +
+             "cosine_distance": 0.5021783412801222                                                                                                                                                    +
+         },                                                                                                                                                                                           +
+         {                                                                                                                                                                                            +
+             "id": 103,                                                                                                                                                                               +
+             "title": "Lock contention resolved",                                                                                                                                                     +
+             "metadata": {                                                                                                                                                                            +
+                 "source": "authored_synthetic_fixture",                                                                                                                                              +
+                 "project": "ghw_demo",                                                                                                                                                               +
+                 "category": "database",                                                                                                                                                              +
+                 "dimensions": 384,                                                                                                                                                                   +
+                 "embedding_model": "sentence-transformers/all-MiniLM-L6-v2"                                                                                                                          +
+             },                                                                                                                                                                                       +
+             "description": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",                                                   +
+             "recorded_at": "2026-10-13T23:59:59+00:00",                                                                                                                                              +
+             "cosine_distance": 0.5140982431857205                                                                                                                                                    +
+         }                                                                                                                                                                                            +
+     ],                                                                                                                                                                                               +
+     "question": "What caused database requests to become slow and which changes made them fast again?",                                                                                              +
+     "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",                                                                                                                                          +
+     "dimensions": 384,                                                                                                                                                                               +
+     "time_window": {                                                                                                                                                                                 +
+         "end_exclusive": "2026-10-14T00:00:00Z",                                                                                                                                                     +
+         "start_inclusive": "2026-10-13T00:00:00Z"                                                                                                                                                    +
+     },                                                                                                                                                                                               +
+     "fixture_source": "authored synthetic events; dates are teaching fixtures",                                                                                                                      +
+     "distance_filter": {                                                                                                                                                                             +
+         "metric": "cosine distance",                                                                                                                                                                 +
+         "maximum_inclusive": 0.6                                                                                                                                                                     +
+     },                                                                                                                                                                                               +
+     "metadata_filter": {                                                                                                                                                                             +
+         "project": "ghw_demo",                                                                                                                                                                       +
+         "category": "database"                                                                                                                                                                       +
+     }                                                                                                                                                                                                +
+ }
+(1 row)
+
+COMMIT
+DISKANN LAB COMPLETE: actual pgvector + pgvectorscale semantic search verified

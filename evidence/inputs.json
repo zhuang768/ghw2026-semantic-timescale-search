@@ -1,0 +1,1520 @@
+{
+  "query": "What caused database requests to become slow and which changes made them fast again?",
+  "window": {
+    "start_inclusive": "2026-10-13 00:00:00+00",
+    "end_exclusive": "2026-10-14 00:00:00+00"
+  },
+  "metadata_filter": {
+    "category": "database",
+    "project": "ghw_demo"
+  },
+  "rows": [
+    {
+      "id": 101,
+      "recorded_at": "2026-10-13 09:00:00+00",
+      "title": "Missing database index",
+      "text": "Slow PostgreSQL queries were caused by a missing index on the customer_id column. Adding a B-tree index reduced query latency from 900 milliseconds to 40 milliseconds.",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 102,
+      "recorded_at": "2026-10-13 00:00:00+00",
+      "title": "Report scan optimization",
+      "text": "The SQL dashboard returned late because a report scanned every row. Adding an index and rewriting the filter improved database query performance.",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 103,
+      "recorded_at": "2026-10-13 23:59:59+00",
+      "title": "Lock contention resolved",
+      "text": "Contention for table locks stalled requests to PostgreSQL. Breaking up one long transaction restored fast responses.",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 104,
+      "recorded_at": "2026-10-13 10:00:00+00",
+      "title": "Backup recovery drill",
+      "text": "The nightly PostgreSQL backup completed successfully. The recovery drill restored a database copy in a staging instance.",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 105,
+      "recorded_at": "2026-10-13 11:00:00+00",
+      "title": "Documentation color update",
+      "text": "The documentation website theme changed from blue to green. The designers made chart labels larger and updated the illustrations.",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 201,
+      "recorded_at": "2026-10-12 23:59:59+00",
+      "title": "Before lower time bound",
+      "text": "What caused database requests to become slow and which changes made them fast again?",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 202,
+      "recorded_at": "2026-10-14 00:00:00+00",
+      "title": "At excluded upper time bound",
+      "text": "What caused database requests to become slow and which changes made them fast again?",
+      "metadata": {
+        "category": "database",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 203,
+      "recorded_at": "2026-10-13 12:00:00+00",
+      "title": "Wrong category",
+      "text": "What caused database requests to become slow and which changes made them fast again?",
+      "metadata": {
+        "category": "frontend",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 204,
+      "recorded_at": "2026-10-13 12:30:00+00",
+      "title": "Wrong project",
+      "text": "What caused database requests to become slow and which changes made them fast again?",
+      "metadata": {
+        "category": "database",
+        "project": "another_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10001,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 1",
+      "text": "Community announcement number 1: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10002,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 2",
+      "text": "Community announcement number 2: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10003,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 3",
+      "text": "Community announcement number 3: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10004,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 4",
+      "text": "Community announcement number 4: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10005,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 5",
+      "text": "Community announcement number 5: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10006,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 6",
+      "text": "Community announcement number 6: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10007,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 7",
+      "text": "Community announcement number 7: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10008,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 8",
+      "text": "Community announcement number 8: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10009,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 9",
+      "text": "Community announcement number 9: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10010,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 10",
+      "text": "Community announcement number 10: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10011,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 11",
+      "text": "Community announcement number 11: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10012,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 12",
+      "text": "Community announcement number 12: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10013,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 13",
+      "text": "Community announcement number 13: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10014,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 14",
+      "text": "Community announcement number 14: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10015,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 15",
+      "text": "Community announcement number 15: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10016,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 16",
+      "text": "Community announcement number 16: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10017,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 17",
+      "text": "Community announcement number 17: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10018,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 18",
+      "text": "Community announcement number 18: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10019,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 19",
+      "text": "Community announcement number 19: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10020,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 20",
+      "text": "Community announcement number 20: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10021,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 21",
+      "text": "Community announcement number 21: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10022,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 22",
+      "text": "Community announcement number 22: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10023,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 23",
+      "text": "Community announcement number 23: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10024,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 24",
+      "text": "Community announcement number 24: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10025,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 25",
+      "text": "Community announcement number 25: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10026,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 26",
+      "text": "Community announcement number 26: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10027,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 27",
+      "text": "Community announcement number 27: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10028,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 28",
+      "text": "Community announcement number 28: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10029,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 29",
+      "text": "Community announcement number 29: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10030,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 30",
+      "text": "Community announcement number 30: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10031,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 31",
+      "text": "Community announcement number 31: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10032,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 32",
+      "text": "Community announcement number 32: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10033,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 33",
+      "text": "Community announcement number 33: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10034,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 34",
+      "text": "Community announcement number 34: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10035,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 35",
+      "text": "Community announcement number 35: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10036,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 36",
+      "text": "Community announcement number 36: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10037,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 37",
+      "text": "Community announcement number 37: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10038,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 38",
+      "text": "Community announcement number 38: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10039,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 39",
+      "text": "Community announcement number 39: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10040,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 40",
+      "text": "Community announcement number 40: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10041,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 41",
+      "text": "Community announcement number 41: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10042,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 42",
+      "text": "Community announcement number 42: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10043,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 43",
+      "text": "Community announcement number 43: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10044,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 44",
+      "text": "Community announcement number 44: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10045,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 45",
+      "text": "Community announcement number 45: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10046,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 46",
+      "text": "Community announcement number 46: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10047,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 47",
+      "text": "Community announcement number 47: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10048,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 48",
+      "text": "Community announcement number 48: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10049,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 49",
+      "text": "Community announcement number 49: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10050,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 50",
+      "text": "Community announcement number 50: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10051,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 51",
+      "text": "Community announcement number 51: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10052,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 52",
+      "text": "Community announcement number 52: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10053,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 53",
+      "text": "Community announcement number 53: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10054,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 54",
+      "text": "Community announcement number 54: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10055,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 55",
+      "text": "Community announcement number 55: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10056,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 56",
+      "text": "Community announcement number 56: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10057,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 57",
+      "text": "Community announcement number 57: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10058,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 58",
+      "text": "Community announcement number 58: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10059,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 59",
+      "text": "Community announcement number 59: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10060,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 60",
+      "text": "Community announcement number 60: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10061,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 61",
+      "text": "Community announcement number 61: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10062,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 62",
+      "text": "Community announcement number 62: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10063,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 63",
+      "text": "Community announcement number 63: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10064,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 64",
+      "text": "Community announcement number 64: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10065,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 65",
+      "text": "Community announcement number 65: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10066,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 66",
+      "text": "Community announcement number 66: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10067,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 67",
+      "text": "Community announcement number 67: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10068,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 68",
+      "text": "Community announcement number 68: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10069,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 69",
+      "text": "Community announcement number 69: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10070,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 70",
+      "text": "Community announcement number 70: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10071,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 71",
+      "text": "Community announcement number 71: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10072,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 72",
+      "text": "Community announcement number 72: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10073,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 73",
+      "text": "Community announcement number 73: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10074,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 74",
+      "text": "Community announcement number 74: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10075,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 75",
+      "text": "Community announcement number 75: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10076,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 76",
+      "text": "Community announcement number 76: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10077,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 77",
+      "text": "Community announcement number 77: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10078,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 78",
+      "text": "Community announcement number 78: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10079,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 79",
+      "text": "Community announcement number 79: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10080,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 80",
+      "text": "Community announcement number 80: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10081,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 81",
+      "text": "Community announcement number 81: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10082,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 82",
+      "text": "Community announcement number 82: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10083,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 83",
+      "text": "Community announcement number 83: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10084,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 84",
+      "text": "Community announcement number 84: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10085,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 85",
+      "text": "Community announcement number 85: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10086,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 86",
+      "text": "Community announcement number 86: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10087,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 87",
+      "text": "Community announcement number 87: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10088,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 88",
+      "text": "Community announcement number 88: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10089,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 89",
+      "text": "Community announcement number 89: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10090,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 90",
+      "text": "Community announcement number 90: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10091,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 91",
+      "text": "Community announcement number 91: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10092,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 92",
+      "text": "Community announcement number 92: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10093,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 93",
+      "text": "Community announcement number 93: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10094,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 94",
+      "text": "Community announcement number 94: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10095,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 95",
+      "text": "Community announcement number 95: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10096,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 96",
+      "text": "Community announcement number 96: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10097,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 97",
+      "text": "Community announcement number 97: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10098,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 98",
+      "text": "Community announcement number 98: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10099,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 99",
+      "text": "Community announcement number 99: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10100,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 100",
+      "text": "Community announcement number 100: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10101,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 101",
+      "text": "Community announcement number 101: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10102,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 102",
+      "text": "Community announcement number 102: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10103,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 103",
+      "text": "Community announcement number 103: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10104,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 104",
+      "text": "Community announcement number 104: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10105,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 105",
+      "text": "Community announcement number 105: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10106,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 106",
+      "text": "Community announcement number 106: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10107,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 107",
+      "text": "Community announcement number 107: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10108,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 108",
+      "text": "Community announcement number 108: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10109,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 109",
+      "text": "Community announcement number 109: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10110,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 110",
+      "text": "Community announcement number 110: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10111,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 111",
+      "text": "Community announcement number 111: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10112,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 112",
+      "text": "Community announcement number 112: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10113,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 113",
+      "text": "Community announcement number 113: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10114,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 114",
+      "text": "Community announcement number 114: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10115,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 115",
+      "text": "Community announcement number 115: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10116,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 116",
+      "text": "Community announcement number 116: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10117,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 117",
+      "text": "Community announcement number 117: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10118,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 118",
+      "text": "Community announcement number 118: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10119,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 119",
+      "text": "Community announcement number 119: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10120,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 120",
+      "text": "Community announcement number 120: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10121,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 121",
+      "text": "Community announcement number 121: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10122,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 122",
+      "text": "Community announcement number 122: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10123,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 123",
+      "text": "Community announcement number 123: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10124,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 124",
+      "text": "Community announcement number 124: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10125,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 125",
+      "text": "Community announcement number 125: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10126,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 126",
+      "text": "Community announcement number 126: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10127,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 127",
+      "text": "Community announcement number 127: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    },
+    {
+      "id": 10128,
+      "recorded_at": "2026-10-11 12:00:00+00",
+      "title": "Community fixture 128",
+      "text": "Community announcement number 128: the cafeteria shared a new lunch menu and the gardening club planted flowers.",
+      "metadata": {
+        "category": "community",
+        "project": "ghw_demo",
+        "source": "authored_synthetic_fixture"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+    "dimensions": 384,
+    "extensions": {
+        "vector": "0.8.1",
+        "timescaledb": "2.22.1"
+    },
+    "provenance": {
+        "model": "sentence-transformers/all-MiniLM-L6-v2",
+        "device": "cpu",
+        "python": "3.9.6",
+        "pooling": "attention-mask-aware mean pooling",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "dimensions": 384,
+        "corpus_count": 137,
+        "input_sha256": "67edee582e3bc71626a0428da5ff1ef1f0f8f14f4496ced840525e32984abdbb",
+        "normalization": "L2",
+        "package_versions": {
+            "numpy": "1.26.4",
+            "torch": "2.6.0",
+            "tokenizers": "0.21.1",
+            "safetensors": "0.5.3",
+            "transformers": "4.51.3",
+            "huggingface-hub": "0.30.2"
+        },
+        "inference_seconds": 0.15248312499999983,
+        "mean_embedding_norm": 1.0,
+        "embedding_array_float32_sha256": "2edeb78393f301ae77890f0ef68d5d51ab5ef2041bcb00f5d485c27b9effb933",
+        "embedding_count_including_query": 138,
+        "filtered_top3_ids_numpy_reference": [
+            101,
+            102,
+            103
+        ]
+    },
+    "corpus_rows": 137,
+    "executed_at": "2026-10-13T18:37:21.961487+00:00",
+    "retrieved_ids": [
+        101,
+        102,
+        103
+    ],
+    "database_version": "17.7"
+}

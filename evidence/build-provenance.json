@@ -1,0 +1,42 @@
+{
+  "recorded_at_utc": "2026-10-13T19:11:03.396645+00:00",
+  "platform": "macOS ARM64",
+  "postgresql": "17.7",
+  "timescaledb": "2.22.1",
+  "pgvector": "0.8.1",
+  "pgvectorscale": "0.9.1",
+  "rustup": "1.29.1",
+  "rustc": "1.91.0 (f8297e351 2025-10-28)",
+  "cargo": "1.91.0",
+  "cargo-pgrx": "0.16.1",
+  "cmake": "3.31.6",
+  "compiler": "Apple Clang17.0.0",
+  "build_scope": "isolated workspace prefix; no global package/profile/security changes",
+  "postgresql_access": "private Unix socket only; TCP disabled; telemetry off",
+  "pgvectorscale_build": "official macOS .cargo/config.toml loaded by running from source project directory; PG17/build_parallel features; no source patch",
+  "extension_create_succeeded": true,
+  "source_archives": [
+    {
+      "filename": "postgresql-17.7.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v17.7/postgresql-17.7.tar.bz2",
+      "sha256": "ef9e343302eccd33112f1b2f0247be493cb5768313adeb558b02de8797a2e9b5"
+    },
+    {
+      "filename": "timescaledb-2.22.1.tar.gz",
+      "source_url": "https://github.com/timescale/timescaledb/archive/refs/tags/2.22.1.tar.gz",
+      "sha256": "4593bb6188f09fa896fa60ff9f045fa1ddcbac84bff69a73c2ce561755526922"
+    },
+    {
+      "filename": "pgvector-0.8.1.tar.gz",
+      "source_url": "https://github.com/pgvector/pgvector/archive/refs/tags/v0.8.1.tar.gz",
+      "sha256": "a9094dfb85ccdde3cbb295f1086d4c71a20db1d26bf1d6c39f07a7d164033eb4"
+    },
+    {
+      "filename": "pgvectorscale-0.9.1.tar.gz",
+      "source_url": "https://github.com/timescale/pgvectorscale/archive/refs/tags/0.9.1.tar.gz",
+      "sha256": "9c5a78a3eaa044c78bfba80473e65a2f748b11bb788cdb06d3b88c93cc7a19aa"
+    }
+  ],
+  "built_vectorscale_library_sha256": "123bf69785d0bf5aea7ee5c49dda01d2637c2cd96c7105542d2eebb9c02a58b8",
+  "cargo_lock_sha256": "22b5179329436f8059c843ba75bcf7a4e5fcb8f8d8b084fc1e5ebf4a5f7426ea"
+}
