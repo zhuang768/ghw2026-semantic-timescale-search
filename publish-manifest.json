@@ -1,0 +1,183 @@
+{
+  "created_at_utc": "2026-10-13T19:11:54.514759+00:00",
+  "payload_file_count": 35,
+  "manifest_excludes_itself": true,
+  "scope": "standalone completed384D semantic/PostgreSQL/TimescaleDB/pgvector/pgvectorscale lab; no model weights/runtime/cache/venv/raw private-path logs",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 95,
+      "sha256": "26e5a39b2d3de1cb0d586e422cf1d82f829fef3f666ee46ea8aecfd2269e4983"
+    },
+    {
+      "path": "DISKANN.md",
+      "bytes": 3796,
+      "sha256": "2baa6ac894cb7bc54f4ec4095d040c635dbe9cedc991dec77122442ddcd71a85"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4398,
+      "sha256": "e0bf443887124767cef5345120cccdadacaa93a3768300986bddd7c87c52c58e"
+    },
+    {
+      "path": "SEMANTIC.md",
+      "bytes": 6954,
+      "sha256": "09cc3d9701bad23168063779b72f1aa9f3fd6598a06593f1f085e7e9ec0b26a7"
+    },
+    {
+      "path": "build-local.sh",
+      "bytes": 2550,
+      "sha256": "3df41af735015bcdf568a0534c871c5df6537bf92653ffaa6c17c105f6f18d9e"
+    },
+    {
+      "path": "build-pgvectorscale.sh",
+      "bytes": 2002,
+      "sha256": "24ed019795dad19ee7075bfef943e1bc9cda8c76dff95073d537892bd42a7853"
+    },
+    {
+      "path": "diskann.sql",
+      "bytes": 11106,
+      "sha256": "2ada43ae6a0994af5d05572e3ba6272df458490124c5a2a853846db10baf3c23"
+    },
+    {
+      "path": "download-model-output.txt",
+      "bytes": 1041,
+      "sha256": "7552c8754317c204ef6c44992b15d0f9fdf8621c38c4d3b67f05da52d5d8c9a3"
+    },
+    {
+      "path": "download_model.py",
+      "bytes": 3229,
+      "sha256": "56da1d527c9de4614cb9a11daa72ca0e262fdc1a2edce9e20495941920e5d443"
+    },
+    {
+      "path": "evidence/build-provenance.json",
+      "bytes": 1892,
+      "sha256": "d9e3e2bfe174891dbb3e8dd7ccb200c72305dffaa670a07aaa279c19902d88a2"
+    },
+    {
+      "path": "evidence/dashboard-http-check.json",
+      "bytes": 1727,
+      "sha256": "030bb6a2d807df31202f046a358936112da9fb27fc933cebe7b75774da5abc8a"
+    },
+    {
+      "path": "evidence/dashboard-readonly-state.json",
+      "bytes": 11266,
+      "sha256": "e664a324a19006c8ab7b132667123b7696adf00e5afc9b94e6c5188065dcb9a4"
+    },
+    {
+      "path": "evidence/database-state.json",
+      "bytes": 1331,
+      "sha256": "cd445ba4f3c90a57f7f8882b0fef1f2df910f98fe7b42fc4cb757337659dc722"
+    },
+    {
+      "path": "evidence/diskann-output.txt",
+      "bytes": 19106,
+      "sha256": "fbfa9d0440ab3b6a2d3751e94cab2c67de910a5782b89eb9b5b1410bac9ee121"
+    },
+    {
+      "path": "evidence/diskann-state.json",
+      "bytes": 3456,
+      "sha256": "c0602b58a4b43b4b801a8939fd0362d5e036b2448f3fa6ae11ed22fb04485d6a"
+    },
+    {
+      "path": "evidence/final-state.json",
+      "bytes": 11266,
+      "sha256": "7b9c27db2713a22b4d34e947a295d01d8389cad7e4611133cb707ac33de286bd"
+    },
+    {
+      "path": "evidence/generated-sha256.json",
+      "bytes": 283,
+      "sha256": "d597dcd0142b457410143afd430fac6812288c9e6747aca66f08c948457472c5"
+    },
+    {
+      "path": "evidence/inference-manifest.json",
+      "bytes": 843,
+      "sha256": "a155680beba490e7ce21b237f9fd0ae3f7ed42020e0428ce3a8e8902f5be2632"
+    },
+    {
+      "path": "evidence/inference-output-public.txt",
+      "bytes": 1635,
+      "sha256": "9dcd058ce2c3ac8102ceb0e50ab640e6a14db814f1e10ed1c3db67870459aeed"
+    },
+    {
+      "path": "evidence/inputs.json",
+      "bytes": 53242,
+      "sha256": "67edee582e3bc71626a0428da5ff1ef1f0f8f14f4496ced840525e32984abdbb"
+    },
+    {
+      "path": "evidence/model-manifest.json",
+      "bytes": 3522,
+      "sha256": "337ccecb38e3570e2b35e8be83b2ef862ada279cbd0f7d1a3f6e61b187879e16"
+    },
+    {
+      "path": "evidence/numpy-reference.json",
+      "bytes": 528,
+      "sha256": "d3c791237b914bfc256f6ce7684b1645bcfa5195d060c222f24d5b3a704eba89"
+    },
+    {
+      "path": "evidence/retrieval-context.json",
+      "bytes": 2641,
+      "sha256": "1eca66381733a681b4525e0bb8bbf0fa23f0818015c0f337da4d7600dc490bbb"
+    },
+    {
+      "path": "evidence/semantic-output.txt",
+      "bytes": 24573,
+      "sha256": "0eb095847e84434cc26e582f779f9063c955e3366a512ddb043ae902b0cfec64"
+    },
+    {
+      "path": "evidence/vectorscale-extension.txt",
+      "bytes": 164,
+      "sha256": "2eeedfc96c2da173a955941d43fbdf42a240c06630bac43fe67e0c355935724a"
+    },
+    {
+      "path": "generate_embeddings.py",
+      "bytes": 9830,
+      "sha256": "57ae5e00c6005761d895cc10ac7c8306a59795daabd3d0deeabd25fa895b5af0"
+    },
+    {
+      "path": "generated/embeddings.sql",
+      "bytes": 803552,
+      "sha256": "cbf250b588a08cfb3be0e0623b526c85f1336ebaa8c0b0b31a4f3091c0c97564"
+    },
+    {
+      "path": "generated/reference.sql",
+      "bytes": 583,
+      "sha256": "a2ccff320acb7d8a6deec5c90528645e3642aa6f9b8721805669f867794538e1"
+    },
+    {
+      "path": "pgvectorscale-Cargo.lock",
+      "bytes": 72164,
+      "sha256": "22b5179329436f8059c843ba75bcf7a4e5fcb8f8d8b084fc1e5ebf4a5f7426ea"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "bytes": 395,
+      "sha256": "ae5fd2b878f301f8637e1689f5fcfffff29d5127deae474a52492d1d22646769"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 110,
+      "sha256": "94d5be69a3fc723a884a02f6f5fd3eedb3bcd45fb23575bab0c37241f5b807c1"
+    },
+    {
+      "path": "run-local.sh",
+      "bytes": 1500,
+      "sha256": "941c12d5035cfab6fa1af660cb3421f289e05ce513de5f68ce34e6e6617dc32b"
+    },
+    {
+      "path": "semantic-dashboard.html",
+      "bytes": 13572,
+      "sha256": "fd5ab77c3803a7e4f21e72160f8adfeb61f6796baed6039f4b7e0c158b45037f"
+    },
+    {
+      "path": "semantic.sql",
+      "bytes": 11017,
+      "sha256": "816c72ae2f9a2b2200c3cd10e0dbfcc4097840a5778021a816c8a6ad8dd20898"
+    },
+    {
+      "path": "serve-semantic.py",
+      "bytes": 11394,
+      "sha256": "611e010169ab7b630a27329a92530323ad980ced77110377cdebcb7b5c31ec54"
+    }
+  ]
+}
